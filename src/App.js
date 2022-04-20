@@ -3,28 +3,24 @@ import CategoryList from "./CategoryList";
 import Navi from "./Navi";
 import ProductList from "./ProductList";
 
-
 function App() {
+  let ProductInfo = { title: "Product List" };
+  let CategoryInfo = { title: "Category List" };
   return (
     <div>
       <Container>
         <Row>
-           <Navi/>
+          <Navi />
         </Row>
         <Row>
-          <Col xs="3"> 
-          <CategoryList title="Category List" />
+          <Col xs="3">
+            <CategoryList info={CategoryInfo} />
           </Col>
           <Col xs="9">
-          <ProductList title="Product List" />
+            <ProductList info={ProductInfo} />
           </Col>
-       
-       
         </Row>
       </Container>
-
-    
-    
     </div>
   );
 }
